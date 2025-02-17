@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Manrope", serif;
+  background-color: hsl(218, 23%, 16%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.card {
+  color: white;
+  background-color: hsl(217, 19%, 24%);
+  max-width: 33rem;
+  text-align: center;
+  position: relative;
+  margin-top: 9rem;
+  padding: 2rem 3rem 3.7rem 3rem;
+  border-radius: 8px;
+}
+.card h4 {
+  margin-bottom: 1rem;
+  color: hsl(150, 100%, 66%);
+}
+.card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+.divider {
+  margin-top: 3rem;
+}
+.dice {
+  background-color: hsl(150, 100%, 66%);
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem;
+  position: absolute;
+  top: 92%;
+  right: 44%;
+  border-radius: 150px;
+  cursor: pointer;
+}
+.dice:hover {
+  box-shadow: 0 0 10px 1px hsl(150, 100%, 66%);
+}
+
+.loader {
+  border: 4px solid hsl(217, 19%, 24%);
+  border-top: 4px solid hsl(150, 100%, 66%);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none; /*Hide by default*/
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.attribution{
+    color: white;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 130%;
+}
+.frontend,
+.name{
+    color: hsl(150, 100%, 66%);
+}
+/* Media queries */
+@media screen and (max-width: 530px) {
+  .card {
+    max-width: 22rem;
+    padding: 2rem 1.5rem 3.7rem 1.5rem;
+  }
+  .card p {
+    font-size: 1.2rem;
+  }
+  .divider img {
+    width: 20rem;
+  }
+}
