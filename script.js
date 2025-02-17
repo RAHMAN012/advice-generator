@@ -18,12 +18,12 @@ const getAdvice = function(){
   fetch(url)
 
   .then(response => {
-    console.log('API Response:', response); // Log the raw response
+    //console.log('API Response:', response); // Log the raw response
     return response.json();
   })
   //
   .then(data => {
-    console.log('API Data:', data); // Log the parsed JSON data
+   // console.log('API Data:', data); // Log the parsed JSON data
     // Hide loader and show advice text
     loader.style.display = "none"
     adviceText.style.display = "block"
